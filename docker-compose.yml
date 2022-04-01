@@ -1,0 +1,10 @@
+version: '4.6'
+services:
+  w3org:
+      image: sypress_compose
+      build:
+          context: .
+          dockerfile: ./Dockerfile
+      volumes:
+          - ./dockerReports:/app/cypress/results
+          - ./dockerReports:/app/mochawesome-report

@@ -1,8 +1,8 @@
-import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps"
+import { When, Then } from "cypress-cucumber-preprocessor/steps"
 
 When('Navigate to the page', () => {
   cy.intercept('GET', '**/multimodal').as('getMultimodal')
-  cy.visit('https://www.w3.org/standards/webofdevices/multimodal', {failOnStatusCode: false})   
+  cy.navigateTo('standards/webofdevices/multimodal')
 })
 
 Then('User shouldn\'t see console errors', () => {

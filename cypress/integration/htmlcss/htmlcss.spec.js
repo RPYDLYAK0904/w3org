@@ -1,8 +1,8 @@
-import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps"
+import { When, Then } from "cypress-cucumber-preprocessor/steps"
 
 When('Navigate to the page', () => {
   cy.intercept('GET', '**/htmlcss').as('getHtmlcss')
-  cy.visit('https://www.w3.org/standards/webdesign/htmlcss', {failOnStatusCode: false})   
+  cy.navigateTo('standards/webdesign/htmlcss')
 })
 
 Then('User shouldn\'t see console errors', () => {

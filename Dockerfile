@@ -2,7 +2,6 @@ FROM cypress/included:9.5.3
 RUN mkdir /cypress-docker
 WORKDIR /cypress-docker
 COPY ./package.json .
-COPY ./package-lock.json .
 COPY ./cypress.json .
 COPY ./cucumber-html-report.js .
 COPY ./cypress ./cypress

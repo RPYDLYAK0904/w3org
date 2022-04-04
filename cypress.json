@@ -1,6 +1,5 @@
 {
     "video": false,
-    "baseURL":"https://www.w3.org/",
     "defaultCommandTimeout": 5000,
     "pageLoadTimeout": 10000,
     "ignoreTestFiles": [ "*.js", "*.md"],
@@ -15,5 +14,8 @@
           "html": false,
           "json": true
       }
+  },
+  "env": {
+    "baseUrl": "https://www.w3.org/"
   }
 }

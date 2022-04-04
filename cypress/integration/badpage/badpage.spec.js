@@ -1,8 +1,8 @@
-import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps'
+import { When, Then } from 'cypress-cucumber-preprocessor/steps'
 
 When('Navigate to the page', () => {
     cy.intercept('GET', '**/badpage').as('getBadpage')
-    cy.visit('https://www.w3.org/standards/badpage', {failOnStatusCode: false})   
+    cy.navigateTo('standards/badpage')
 })
 
 Then('User shouldn\'t see console errors', () => {
@@ -26,5 +26,5 @@ Then('Response codes should be 200', () => {
             }).then(response => {                
               expect(response.status).to.equal(200)
             })
-        })
+    })
 })

@@ -6,7 +6,7 @@ services:
     image: "cypress-w3org"
     command: "test:chrome"
     volumes:
-      - ./dockerReportsChrome:/cypress-docker/cypress/reports/
+      - ./dockerReportsChrome:/cypress-docker/cypress/reports-chrome/
       - ./dockerReportsChrome/screenshots:/cypress-docker/cypress/screenshots/
 
   # this container will run Cypress test using Firefox browser

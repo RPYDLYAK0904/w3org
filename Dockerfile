@@ -1,15 +1,15 @@
-FROM cypress/base:12
-
-RUN mkdir /app
-WORKDIR /app
-
-COPY . /app
-
+FROM cypress/included:9.5.3
+RUN mkdir /cypress-docker
+WORKDIR /cypress-docker
+COPY ./package.json .
+COPY ./package-lock.json .
+COPY ./cypress.json .
+COPY ./cucumber-html-report.js .
+COPY ./cypress ./cypress
 RUN npm install
+ENTRYPOINT ["npm", "run"]
 
-RUN $(npm bin)/cypress verify
-
-RUN ["npm", "run", "cy:w3org"]
-
-#docker build -t cypress .
-#docker-compose up
+# docker build -t cypress-w3org .
+# docker-compose run e2e-chrome
+# docker-compose run e2e-firefox
+# docker-compose up

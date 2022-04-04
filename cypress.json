@@ -1,9 +1,19 @@
 {
+    "video": false,
+    "baseURL":"https://www.w3.org/",
     "defaultCommandTimeout": 5000,
     "pageLoadTimeout": 10000,
     "ignoreTestFiles": [ "*.js", "*.md"],
     "reporter": "cypress-multi-reporters",
+    "screenshotsFolder": "cypress/reports-firefox/mochareports/assets",
     "reporterOptions": {
-    "configFile": "reporter-config.json"
+      "reporterEnabled": "mochawesome",
+      "mochawesomeReporterOptions": {
+          "reportDir": "cypress/reports-firefox/mocha",
+          "quite": true,
+          "overwrite": false,
+          "html": false,
+          "json": true
+      }
   }
 }

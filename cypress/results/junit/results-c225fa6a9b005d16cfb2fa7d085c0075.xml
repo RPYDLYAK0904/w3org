@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="4.2970" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2022-04-01T02:21:00" tests="0" file="cypress/integration/badpage.feature" time="0.0000" failures="0">
-  </testsuite>
-  <testsuite name="Bad page" timestamp="2022-04-01T02:21:00" tests="1" time="4.2770" failures="0">
-    <testcase name="Bad page Validate console errors and response code" time="1.3980" classname="Validate console errors and response code">
-    </testcase>
-  </testsuite>
-</testsuites>

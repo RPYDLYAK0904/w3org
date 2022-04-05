@@ -19,7 +19,7 @@ Then('User should see response code 200 from the page', () => {
 })
 
 Then('Response codes should be 200', () => {
-  htmlcss.allLinks().each(page => {
+  htmlcss.allLinks.each(page => {
           const link = page.prop('href')
           cy.request({
             url: link,

@@ -1,4 +1,5 @@
 import { When, Then } from "cypress-cucumber-preprocessor/steps"
+import htmlcss from "../../support/pages/htmlcss"
 
 When('Navigate to the page', () => {
   cy.intercept('GET', '**/htmlcss').as('getHtmlcss')
@@ -18,7 +19,7 @@ Then('User should see response code 200 from the page', () => {
 })
 
 Then('Response codes should be 200', () => {
-  cy.get("a[href]").each(page => {
+  htmlcss.allLinks().each(page => {
           const link = page.prop('href')
           cy.request({
             url: link,

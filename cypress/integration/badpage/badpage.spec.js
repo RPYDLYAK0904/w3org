@@ -1,4 +1,5 @@
 import { When, Then } from 'cypress-cucumber-preprocessor/steps'
+import badpage from '../../support/pages/badpage'
 
 When('Navigate to the page', () => {
     cy.intercept('GET', '**/badpage').as('getBadpage')
@@ -18,7 +19,7 @@ Then('User should see response code 404 from the page', () => {
 })
 
 Then('Response codes should be 200', () => {
-    cy.get("a[href]").each(page => {
+    badpage.allLinks().each(page => {
             const link = page.prop('href')
             cy.request({
               url: link,

@@ -16,9 +16,11 @@ Two html reports will be generated when paralel executing in dockerReportsChrome
 
 
 2. To run tests loccaly:
+    - To install dependencies run:
     - npm install
+    - To run on Chrome run:
     - npm run test:chrome
-    - or
+    - To run on Firefox run:
     - npm run test:firefox
 
 Reports will be generated into reports-chrome and reports-firefox folders respectively 

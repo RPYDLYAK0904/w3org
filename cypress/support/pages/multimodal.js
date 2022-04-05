@@ -1,7 +1,7 @@
 class Multimodal {
 
-    allLinks(){
-        cy.get('a[href]')
+    get allLinks(){
+        return cy.get('a[href]')
     }
 }
 export default Multimodal = new Multimodal()

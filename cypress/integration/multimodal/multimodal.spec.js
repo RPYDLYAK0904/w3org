@@ -19,7 +19,7 @@ Then('User should see response code 200 from the page', () => {
 })
 
 Then('Response codes should be 200', () => {
-  multimodal.allLinks().each(page => {
+  multimodal.allLinks.each(page => {
           const link = page.prop('href')
           cy.request({
             url: link,

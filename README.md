@@ -2,8 +2,8 @@
 
 1. To run test from Docker:
     - Download Docker on your machine
-    To build image run:
-    - docker build -t cypress-w3org .
+    - To build image run:
+    docker build -t cypress-w3org .
     To run tests on Chrome run:
     - docker-compose run e2e-chrome
     To run tests on Firefox run:
